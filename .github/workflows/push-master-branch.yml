@@ -1,10 +1,10 @@
 # Unique name for this workflow
-name: Deploy master branch to production org
+name: Deploy main branch to production org
 
 # Definition when the workflow should run
 on:
     push:
-      branches: [ main ]
+      branches: [ integration ]
       paths:
         - 'force-app/**'
             
@@ -37,7 +37,7 @@ jobs:
                 fetch-depth: 0
 
             # Store secret for production org
-            - name: 'Populate auth file with SFDX_URL secret of the integration and staging orgs'
+            - name: 'Populate auth file with SFDX_URL secret of the production orgs'
               shell: bash
               run: |
                   echo ${{ secrets.SFDX_PRODUCTION_URL}} > ./SFDX_PRODUCTION_URL.txt
