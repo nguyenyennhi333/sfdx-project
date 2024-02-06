@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Limit_Age_Enter</fullName>
-    <active>true</active>
-    <description>Limit the age entered. Allowed value from 1 to 100 only.</description>
-    <errorConditionFormula>Age__c &lt; 0 || Age__c &gt; 100</errorConditionFormula>
-    <errorMessage>The age entered is not acceptance. Please enter value from 1 to 100.</errorMessage>
-</ValidationRule>
