@@ -1,6 +1,7 @@
 # Unique name for this workflow
 name: Validate PR on develop branch
 
+# Validate when feature branch is merged into develop branch
 # Definition when the workflow should run
 on:
     # The workflow will run whenever an event happens on a pull request
